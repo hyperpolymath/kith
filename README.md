@@ -1,0 +1,20 @@
+# Kith: Ethical .well-known Management
+
+A **modular, Ada-powered TUI** for managing `.well-known` directories with:
+- AIBDP, security.txt, ACME, WebFinger, DID, and more
+- Ethical AI governance, union policies, and legacy tools
+- Git/SaltStack/Nushell integration
+
+## Structure
+- `src/ada/`: Core Ada logic (TUI, validation, plugins)
+- `src/nushell/`: Nushell scripts for automation
+- `src/saltstack/`: Salt states for deployment
+- `templates/`: Pre-loaded configurations
+- `.well-known/`: Example files
+- `schemas/`: JSON schemas for validation
+- `scripts/`: DevOps and CI helpers
+
+## Usage
+1. Build: `gprbuild -p src/ada/kith.gpr`
+2. Run: `./bin/kith`
+3. Test: `make test`
