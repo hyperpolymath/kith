@@ -1,13 +1,29 @@
-cat > kith.gpr << 'EOF'
-project Kith is
-for Source_Dirs use ("src/ada/core", "src/ada/ui", "src/ada/validation", "src/ada/integration", "src/ada/plugins");
-for Object_Dir use "obj";
-for Exec_Dir use "bin";
-for Main use ("main.adb");  -- If main.adb is in the root
--- OR, if main.adb is in src/ada/core/:
--- for Main use ("src/ada/core/main.adb");
-package Compiler is
-    for Default_Switches ("Ada") use ("-g", "-O2", "-gnat2022");
-end Compiler;
+-- SPDX-License-Identifier: AGPL-3.0-or-later
+-- SPDX-FileCopyrightText: 2025 Jonathan D.A. Jewell
+--
+-- Kith - Main package body
+
+with Ada.Text_IO; use Ada.Text_IO;
+with TUI;         use TUI;
+
+package body Kith is
+
+   --  Initialize the application
+   procedure Initialize is
+   begin
+      Put_Line ("Initializing " & Name & " v" & Version);
+   end Initialize;
+
+   --  Run the main application loop
+   procedure Run is
+   begin
+      Show_Menu;
+   end Run;
+
+   --  Finalize and cleanup
+   procedure Finalize is
+   begin
+      Put_Line ("Goodbye from " & Name & "!");
+   end Finalize;
+
 end Kith;
-EOF
