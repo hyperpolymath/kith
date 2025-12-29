@@ -1,5 +1,7 @@
 = Kith: Ethical .well-known Management
 
+image:https://img.shields.io/badge/license-AGPL--3.0-blue.svg[AGPL-3.0,link="https://www.gnu.org/licenses/agpl-3.0"] image:https://img.shields.io/badge/philosophy-Palimpsest-purple.svg[Palimpsest,link="https://github.com/hyperpolymath/palimpsest-licence"]
+
 A *modular, Ada-powered TUI* for managing `.well-known` directories with:
 - AIBDP, security.txt, ACME, WebFinger, DID, and more
 - Ethical AI governance, union policies, and legacy tools
